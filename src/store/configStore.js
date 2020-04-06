@@ -8,7 +8,8 @@ import postsReducer from "../reducers/postsReducer"
 const configStore=()=>{
     const store=createStore(combineReducers({
      users:usersReducer,
-     posts:postsReducer
+     posts:postsReducer,
+     comments:commentsReducer
     }),applyMiddleware(thunk))
 
     return store
