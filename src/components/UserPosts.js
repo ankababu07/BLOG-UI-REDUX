@@ -31,7 +31,7 @@ console.log(props.posts)
                 {
                     props.posts.map(post=>{
                         return (
-                        <li key={post.id}><Link>{post.title}</Link></li>
+                        <li key={post.id}><Link to={`/posts/${post.id}`}>{post.title}</Link></li>
                         )
                     })
                 }
@@ -40,10 +40,10 @@ console.log(props.posts)
     ) 
 }
 
-const mapStateToProps=(state,ownState)=>{
+const mapStateToProps=(state,ownProps)=>{
     return {
-        users:state.users.find(usr=> usr.id== ownState.match.params.id)  ,
-        posts:state.posts.filter(post=> post.userId == ownState.match.params.id)
+        users:state.users.find(usr=> usr.id== ownProps.match.params.uid)  ,
+        posts:state.posts.filter(post=> post.userId == ownProps.match.params.uid)
     }
 }
 

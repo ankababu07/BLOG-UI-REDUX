@@ -6,6 +6,7 @@ import UsersList from "./components/UsersList"
 import UserDetails from "./components/UserDetails"
 import Posts from './components/Posts';
 import UserPosts from "./components/UserPosts"
+import PostComments from './components/PostComments';
 
 
 function App() {
@@ -21,8 +22,9 @@ function App() {
 
         <Route exact path="/" component={Home}/>
         <Route exact path="/users" component={UsersList}/>
-        <Route path="/posts" component={Posts}/>
-        <Route path="/users/:id" component={UserPosts}/>
+        <Route exact path="/posts" component={Posts}/>
+        <Route path="/users/:uid" component={UserPosts}/>
+        <Route path="/posts/:pid" component={PostComments}/>
 
 
 
