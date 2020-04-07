@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom'
 const UserPosts = (props) => {
 
 useEffect(()=>{
-    console.log("Use effect1")
+
     if(props.users.length==0){
         props.dispatch(startGetUsers())
     }
@@ -18,11 +18,6 @@ useEffect(()=>{
   
 },[])
 
-
-
-//console.log(props.users)
-console.log(props.users)
-console.log(props.posts)
     return (
         <div>
             <h1>User Name: {props.users.name}</h1>

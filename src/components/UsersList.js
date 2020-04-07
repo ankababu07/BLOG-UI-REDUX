@@ -4,22 +4,13 @@ import {connect} from "react-redux"
 import { Link } from 'react-router-dom'
 
 
-const UsersList = (props) => {
-    // const [state, setstate] = useState([])
-    // console.log("this is props",props.users)
-    
+const UsersList = (props) => {    
     useEffect(()=>{
-        // console.log("hello",props.users)
         if(props.users.length===0){
         props.dispatch(startGetUsers())
-        // setstate(props.users)
         }
-        // setstate(props.users)
-        // console.log("length",props.users.length)
-
     },[])
 
-    // console.log("State",state)
         return (
         
             <div>

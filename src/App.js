@@ -3,7 +3,6 @@ import './App.css';
 import {BrowserRouter as Router,Link,Route} from 'react-router-dom'
 import Home from "./components/Home"
 import UsersList from "./components/UsersList"
-import UserDetails from "./components/UserDetails"
 import Posts from './components/Posts';
 import UserPosts from "./components/UserPosts"
 import PostComments from './components/PostComments';
