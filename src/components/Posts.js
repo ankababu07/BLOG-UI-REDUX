@@ -1,6 +1,7 @@
 import React,{useEffect} from 'react'
 import {connect} from 'react-redux'
 import {startGetPosts} from '../actions/postActions'
+import {Link} from 'react-router-dom'
 
 const Posts = (props) => {
 console.log(props)
@@ -17,7 +18,7 @@ console.log(props.posts)
                 {
                     props.posts.map(post=>{
                         return (
-                            <li key={post.id}>{post.title}</li>
+                            <li key={post.id}><Link to={`/posts/${post.id}`}> {post.title} </Link> </li>
                         )
                     })
                 }
